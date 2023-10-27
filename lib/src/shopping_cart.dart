@@ -439,18 +439,18 @@ class ShoppingCart {
   DbCartItemModel _setProductValuesForDb({required CartItem cartItem}) {
     DbCartItemModel cartItems = DbCartItemModel();
     try {
-      cartItems.productId = cartItem.productId ?? 0;
+      cartItems.productId = cartItem.productId;
       cartItems.vendorId = cartItem.vendorId ?? -1;
       cartItems.unitPrice = cartItem.unitPrice ?? 0.0;
       cartItems.subTotal = cartItem.subTotal ?? 0.0;
       cartItems.productName = cartItem.productName ?? "";
-      cartItems.quantity = cartItem.quantity ?? 1;
-      cartItems.cartItemApiId = cartItem.cartItemApiId ?? -1;
-      cartItems.id = cartItem.cartItemApiId ?? -1;
+      cartItems.quantity = cartItem.quantity;
+      cartItems.cartItemApiId = cartItem.cartItemApiId;
+      cartItems.id = cartItem.cartItemApiId;
       cartItems.itemImage = cartItem.itemImage ?? "";
-      cartItems.cartName = cartItem.cartName ?? "";
+      cartItems.cartName = cartItem.cartName ?? "main";
       cartItems.cartItemOptionList = cartItem.cartItemOptionList ?? [];
-      cartItems.productDetails = cartItem.productDetails ?? null;
+      cartItems.productDetails = cartItem.productDetails;
     } catch (e) {
        //print(e.toString());
     }

@@ -54,8 +54,7 @@ class DbMain extends DbAllAbstract {
       chatInBox?.clear();
       // box.close();
     } catch (e) {
-      print("CANT CLEAR DB");
-       print(e.toString());
+       //print(e.toString());
     }
     return true;
   }
